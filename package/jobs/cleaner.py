@@ -1,8 +1,8 @@
-from package.file_handler import File_Handler
-from package.logger import Logger
-from package.usfm_cleaner import USFM_Cleaner
-from package.html_cleaner import HTML_Cleaner
-from package.space_cleaner import Space_Cleaner
+from package.cleaners.html_cleaner import HTML_Cleaner
+from package.cleaners.usfm_cleaner import USFM_Cleaner
+from package.cleaners.space_cleaner import Space_Cleaner
+from package.tools.logger import Logger
+from package.tools.file_handler import File_Handler
 
 
 class Cleaner:
@@ -55,4 +55,5 @@ class Cleaner:
 
         File_Handler.write_file(file_path, self.text)
 
-        Logger.show_success(f"Text saved to {file_path}")
+        file_name: str = file_path.split("\\")[-1]
+        Logger.show_success(f"Text saved to {file_name}")

@@ -11,8 +11,9 @@ from package.file_handler import File_Handler
 current_dir: str = os.path.dirname(os.path.abspath(__file__))
 target_file: str = os.path.join(current_dir, "data.md")
 
-text: str = File_Handler.read_file(target_file)
-cleaner = Cleaner(text)
-text = cleaner.clean()
+cleaner: Cleaner = Cleaner()
+cleaner.load_from_file(target_file)
+cleaner.clean()
+cleaner.save_to_file(target_file)
 
-File_Handler.write_file(target_file, text) if text else None
+print(cleaner.text)

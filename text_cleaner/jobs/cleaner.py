@@ -1,8 +1,8 @@
-from package.cleaners.html_cleaner import HTML_Cleaner
-from package.cleaners.usfm_cleaner import USFM_Cleaner
-from package.cleaners.space_cleaner import Space_Cleaner
-from package.tools.logger import Logger
-from package.tools.file_handler import File_Handler
+from text_cleaner.cleaners.html_cleaner import HTML_Cleaner
+from text_cleaner.cleaners.usfm_cleaner import USFM_Cleaner
+from text_cleaner.cleaners.space_cleaner import Space_Cleaner
+from text_cleaner.tools.logger import Logger
+from text_cleaner.tools.file_handler import File_Handler
 
 
 class Cleaner:

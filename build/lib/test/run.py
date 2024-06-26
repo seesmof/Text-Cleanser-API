@@ -1,7 +1,6 @@
 """ 
 TODO
 add json formatting
-add console command that would take in a file and clean it
 """
 
 import os
